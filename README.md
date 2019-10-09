@@ -73,4 +73,12 @@ ssh-keygen -t rsa -C "youremail@example.com"
 #2、远程添加公钥
 打开GitHub，SSH and GPG keys中添加SSH keys添加上述id_rsa.pub内容。
 
+#3、测试远程连接
+ssh -T git@github.com
+ssh -T -p 443 git@ssh.github.com
+不加-p默认为22端口，注意windows防火墙需要允许22端口的in操作。
+
+#4、获取远程仓库pull
+git pull git@github.com:maozhu88/gitguide.git
+
 
